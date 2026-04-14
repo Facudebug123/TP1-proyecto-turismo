@@ -1,0 +1,255 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 150px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.header h2 a {
+  color: white;
+
+  text-decoration: double;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 20px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+.menu-items {
+  display: none;
+  transition: 2s;
+  list-style: none;
+}
+
+#menu-toggle:checked ~ .menu-items {
+  display: flex;
+}
+#menu-toggle {
+  display: none;
+}
+
+.menu-items li {
+  padding: 10px;
+}
+.menu-icon {
+  color: white;
+  font-size: 2rem;
+  margin-right: 30px;
+}
+.menu-items a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  text-align: center;
+  padding: 50px;
+
+  margin: 0;
+  font-family: "Archivo Black", sans-serif;
+}
+
+/* TITULO */
+h1 {
+  font-size: 2.5rem;
+  margin-top: 10%;
+  margin-bottom: 20px;
+}
+
+/* 🔥 OCULTAR CHECK */
+#switch {
+  display: none;
+}
+
+/* TOGGLE */
+.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 30px;
+}
+
+/* BARRA */
+.toggle label {
+  width: 50px;
+  height: 25px;
+  background: #334155;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* BOLITA */
+.toggle label::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: #38bdf8;
+  position: absolute;
+  top: 2.5px;
+  left: 3px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+/* 🔥 MOVIMIENTO */
+#switch:checked + .toggle label::after {
+  transform: translateX(24px);
+}
+
+/* TABLA */
+.tabla {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ANIMACION */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* PLAN */
+.plan {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 15px;
+  width: 230px;
+  position: relative;
+  overflow: hidden;
+
+  animation: aparecer 0.6s ease forwards;
+  transition: all 0.3s ease;
+}
+
+/* DELAY PRO */
+.plan:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.plan:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.plan:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* HOVER PRO */
+.plan:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(56, 189, 248, 0.4);
+}
+
+/* GLOW */
+.plan::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(56, 189, 248, 0.3),
+    transparent
+  );
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none; /* 🔥 CLAVE */
+}
+
+.plan:hover::before {
+  opacity: 1;
+}
+
+/* DESTACADO */
+.destacado {
+  border: 2px solid #38bdf8;
+}
+
+/* PRECIO */
+.precio {
+  font-size: 2rem;
+  margin: 15px 0;
+  color: #38bdf8;
+}
+
+/* CAMBIO PRECIO */
+.anio {
+  display: none;
+}
+
+#switch:checked ~ .tabla .mes {
+  display: none;
+}
+
+#switch:checked ~ .tabla .anio {
+  display: inline;
+}
+
+/* LISTA */
+.plan ul {
+  list-style: none;
+  text-align: left;
+}
+
+.plan ul li {
+  margin: 10px 0;
+  position: relative;
+  cursor: pointer;
+}
+
+/* TOOLTIP */
+.plan ul li::after {
+  content: attr(data-info);
+  position: absolute;
+  bottom: 120%;
+  left: 0;
+  background: #38bdf8;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.plan ul li:hover::after {
+  opacity: 1;
+}
+
+/* BOTON */
+.plan button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #38bdf8;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.plan button:hover {
+  transform: scale(1.05);
+}

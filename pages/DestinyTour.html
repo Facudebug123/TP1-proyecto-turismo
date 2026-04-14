@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destino</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../styles/DestinyTour.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="Home.html" title="Inicio">
+        <img
+          src="../assets/img/Destino Ideal en paraíso tropical.png"
+          alt="Logo Turismo"
+          class="logo"
+        />
+      </a>
+
+      <nav class="menu">
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon"> ☰ </label>
+        <ul class="menu-items">
+          <li>
+            <a href="ContactoFormulario.html" title="Precios">Contacto</a>
+          </li>
+          <li><a href="Agency.html" title="Agencias">Agencias</a></li>
+          <li><a href="Price.html" title="Precios">Precios</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <input type="radio" name="menu" id="cerrar" checked />
+      <input type="radio" name="menu" id="abrir" />
+
+      <label for="abrir" class="boton">Categorías ▼</label>
+
+      <input type="radio" name="filtro" id="todos" checked />
+      <input type="radio" name="filtro" id="cultura" />
+      <input type="radio" name="filtro" id="naturaleza" />
+      <input type="radio" name="filtro" id="playa" />
+      <input type="radio" name="filtro" id="gastronomia" />
+      <input type="radio" name="filtro" id="religioso" />
+
+      <div class="dropdown">
+        <label for="todos">Todos</label>
+        <label for="cultura">Cultura</label>
+        <label for="naturaleza">Naturaleza</label>
+        <label for="playa">Playa</label>
+        <label for="gastronomia">Gastronómico</label>
+        <label for="religioso">Religioso</label>
+
+        <label for="cerrar" class="cerrar">cerrar</label>
+      </div>
+
+      <section class="galeria">
+        <article class="item naturaleza alto">
+          <img src="../assets/img/image-naturaleza.jpeg" />
+        </article>
+
+        <article class="item naturaleza">
+          <img src="../assets/img/image-naturaleza-2.jpeg" />
+        </article>
+
+        <article class="item cultura ancho">
+          <img src="../assets/img/image-culture.jpeg" />
+        </article>
+
+        <article class="item cultura ancho">
+          <img src="../assets/img/image-culture-2.jpeg" />
+        </article>
+
+        <article class="item playa alto">
+          <img src="../assets/img/image-playa.jpeg" />
+        </article>
+
+        <article class="item playa">
+          <img src="../assets/img/image-playa-2.jpeg" />
+        </article>
+        <article class="item gastronomia alto">
+          <img src="../assets/img/image-gastronomia.jpeg" />
+        </article>
+        <article class="item gastronomia ancho">
+          <img src="../assets/img/image-gastronomia-2.jpeg" />
+        </article>
+        <article class="item sol">
+          <img src="../assets/img/image-sol.jpeg" />
+        </article>
+        <article class="item sol ancho">
+          <img src="../assets/img/image-sol-2.jpeg" />
+        </article>
+        <article class="item religioso">
+          <img src="../assets/img/image-religioso.jpeg" />
+        </article>
+        <article class="item religioso ancho">
+          <img src="../assets/img/image-religioso-2.jpeg" />
+        </article>
+      </section>
+
+      <section class="destinos-info">
+        <h2>Información de Destinos Disponibles</h2>
+
+        <div class="cards-container">
+          <div class="card">
+            <img src="../assets/img/image-naturaleza.jpeg" />
+            <div class="overlay">
+              <h3>Montañas del Norte</h3>
+              <p>Turismo de naturaleza</p>
+              <span>$5.000 usd</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="../assets/img/image-playa.jpeg" />
+            <div class="overlay">
+              <h3>Playas Caribeñas</h3>
+              <p>Sol y playa</p>
+              <span>$6.000 usd</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="../assets/img/image-culture.jpeg" />
+            <div class="overlay">
+              <h3>Centro Histórico</h3>
+              <p>Cultural</p>
+              <span>$3.000 usd</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="../assets/img/image-gastronomia.jpeg" />
+            <div class="overlay">
+              <h3>Ruta Gastronómica</h3>
+              <p>Comida típica</p>
+              <span>$4.500 usd</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="tabla-precios">
+        <h2>Precios de Destinos</h2>
+
+        <div class="tabla-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Destino</th>
+                <th>Categoría</th>
+                <th>Duración</th>
+                <th>Precio</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Montañas del Norte</td>
+                <td>Naturaleza</td>
+                <td>3 días</td>
+                <td>$5.000 usd</td>
+              </tr>
+
+              <tr>
+                <td>Playas Caribeñas</td>
+                <td>Playa</td>
+                <td>5 días</td>
+                <td>$6.000</td>
+              </tr>
+
+              <tr>
+                <td>Centro Histórico</td>
+                <td>Cultural</td>
+                <td>2 días</td>
+                <td>$3.000</td>
+              </tr>
+
+              <tr>
+                <td>Ruta Gastronómica</td>
+                <td>Gastronómico</td>
+                <td>1 día</td>
+                <td>$4.500</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <a href="BlogDestinyTour.html" target="_blank" class="blog"
+      >Blog de Destinos➡️
+    </a>
+  </body>
+</html>

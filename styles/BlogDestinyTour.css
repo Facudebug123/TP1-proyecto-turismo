@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #f1f5f9;
+  padding: 30px;
+}
+
+/* OCULTAR INPUTS */
+input[type="radio"] {
+  display: none;
+}
+
+/* TITULO */
+.titulo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* FILTROS */
+.filtros {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.filtros label {
+  margin: 0 10px;
+  padding: 8px 15px;
+  background: #e2e8f0;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filtros label:hover {
+  background: #38bdf8;
+  color: white;
+}
+
+/* GRID REVISTA */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+/* POSTS */
+.post {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* EFECTO REVISTA */
+.post:nth-child(1) {
+  grid-column: span 2;
+}
+
+.post:nth-child(3) {
+  grid-row: span 2;
+}
+
+/* HOVER */
+.post:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* TAGS (opcional si usás) */
+.tag {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background: #38bdf8;
+  color: white;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+
+/* 🔥 FILTRO DESTINOS */
+
+/* PLAYA */
+#playa:checked ~ .grid .montana,
+#playa:checked ~ .grid .cultura,
+#playa:checked ~ .grid .gastronomia {
+  display: none;
+}
+
+/* MONTAÑA */
+#montana:checked ~ .grid .playa,
+#montana:checked ~ .grid .cultura,
+#montana:checked ~ .grid .gastronomia {
+  display: none;
+}
+
+/* CULTURA */
+#cultura:checked ~ .grid .playa,
+#cultura:checked ~ .grid .montana,
+#cultura:checked ~ .grid .gastronomia {
+  display: none;
+}
+
+/* GASTRONOMIA */
+#gastronomia:checked ~ .grid .playa,
+#gastronomia:checked ~ .grid .montana,
+#gastronomia:checked ~ .grid .cultura {
+  display: none;
+}
+
+/* TODOS */
+#todos:checked ~ .grid .post {
+  display: block;
+}
+
+/* COMENTARIOS */
+.comentarios {
+  margin-top: 50px;
+}
+
+/* BLOQUE */
+.comentario {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+/* HOVER */
+.comentario:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔥 FILTRO COMENTARIOS */
+
+/* PLAYA */
+#playa:checked ~ .comentarios .montana,
+#playa:checked ~ .comentarios .cultura,
+#playa:checked ~ .comentarios .gastronomia {
+  display: none;
+}
+
+/* MONTAÑA */
+#montana:checked ~ .comentarios .playa,
+#montana:checked ~ .comentarios .cultura,
+#montana:checked ~ .comentarios .gastronomia {
+  display: none;
+}
+
+/* CULTURA */
+#cultura:checked ~ .comentarios .playa,
+#cultura:checked ~ .comentarios .montana,
+#cultura:checked ~ .comentarios .gastronomia {
+  display: none;
+}
+
+/* GASTRONOMIA */
+#gastronomia:checked ~ .comentarios .playa,
+#gastronomia:checked ~ .comentarios .montana,
+#gastronomia:checked ~ .comentarios .cultura {
+  display: none;
+}
+
+/* AVATAR */
+.avatar {
+  width: 40px;
+  height: 40px;
+  background: #38bdf8;
+  border-radius: 50%;
+  position: relative;
+}
+
+/* CABEZA */
+.avatar::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 11px;
+}
+
+/* CUERPO */
+.avatar::after {
+  content: "";
+  width: 24px;
+  height: 12px;
+  background: white;
+  position: absolute;
+  bottom: 5px;
+  left: 8px;
+  border-radius: 10px;
+}

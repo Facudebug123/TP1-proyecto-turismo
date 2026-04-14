@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Precios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/Price.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="Home.html" title="Inicio">
+        <img
+          src="../assets/img/Destino Ideal en paraíso tropical.png"
+          alt="Logo Turismo"
+          class="logo"
+        />
+      </a>
+
+      <nav class="menu">
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon"> ☰ </label>
+        <ul class="menu-items">
+          <li>
+            <a href="ContactoFormulario.html" title="Precios">Contacto</a>
+          </li>
+          <li><a href="Agency.html" title="Agencias">Agencias</a></li>
+          <li><a href="DestinyTour.html" title="Destinos">Destinos</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h1>🌎 Planes de Viaje</h1>
+    <!-- 🔥 INPUT CLAVE -->
+    <input type="checkbox" id="switch" />
+
+    <!-- TOGGLE -->
+    <div class="toggle">
+      <span>Mensual</span>
+      <label for="switch"></label>
+      <span>Anual</span>
+    </div>
+
+    <!-- TABLA -->
+    <div class="tabla">
+      <div class="plan">
+        <h2>Jujuy</h2>
+        <p class="precio">
+          <span class="mes"> $100</span>
+          <span class="anio"> $80</span>
+        </p>
+        <ul>
+          <li data-info="Incluye hospedaje básico">✔ Hospedaje</li>
+          <li data-info="Excursión guiada">✔ Tours</li>
+          <li data-info="Desayuno incluido">✔ Comida</li>
+        </ul>
+        <button>Elegir</button>
+      </div>
+
+      <div class="plan destacado">
+        <h2>Brasil</h2>
+        <p class="precio">
+          <span class="mes">$250</span>
+          <span class="anio">$200</span>
+        </p>
+        <ul>
+          <li data-info="Hotel 4 estrellas">✔ Hospedaje</li>
+          <li data-info="Acceso a playas premium">✔ Playas</li>
+          <li data-info="Comidas ilimitadas">✔ All inclusive</li>
+        </ul>
+        <button>Elegir</button>
+      </div>
+
+      <div class="plan">
+        <h2>Europa</h2>
+        <p class="precio">
+          <span class="mes">$500</span>
+          <span class="anio">$420</span>
+        </p>
+        <ul>
+          <li data-info="Hoteles de lujo">✔ Hospedaje</li>
+          <li data-info="Acceso a museos">✔ Cultura</li>
+          <li data-info="Viajes entre países">✔ Transporte</li>
+        </ul>
+        <button>Elegir</button>
+      </div>
+    </div>
+  </body>
+</html>

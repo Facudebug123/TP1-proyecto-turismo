@@ -1,0 +1,168 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 150px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.header h2 a {
+  color: white;
+
+  text-decoration: double;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 20px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.menu-items {
+  display: none;
+  transition: 2s;
+  list-style: none;
+}
+
+#menu-toggle:checked ~ .menu-items {
+  display: flex;
+}
+#menu-toggle {
+  display: none;
+}
+
+.menu-items li {
+  padding: 10px;
+}
+.menu-icon {
+  color: white;
+  font-size: 2rem;
+  margin-right: 30px;
+}
+.menu-items a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+h2 {
+  color: #fff;
+  text-align: center;
+}
+.agencias {
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  justify-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .agencias {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.cards-agencias {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* card base */
+.card {
+  width: 250px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+/* efecto flip */
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* caras */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+}
+
+.card-front {
+  background: lightcoral;
+  color: white;
+}
+
+.card-back {
+  background: #2c3e50;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 5px;
+}
+
+.rating input {
+  display: none;
+}
+
+/* estrellas */
+.rating label {
+  font-size: 25px;
+  color: #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* hover */
+.rating label:hover,
+.rating label:hover ~ label {
+  color: gold;
+  transform: scale(1.2);
+}
+
+/* seleccionadas */
+.rating input:checked ~ label {
+  color: gold;
+}
+
+body {
+  font-family: "Archivo Black", sans-serif;
+  background-color: #1e1e1e;
+}
+main {
+  margin-top: 200px;
+}
